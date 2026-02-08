@@ -1,5 +1,5 @@
 # Rausku Landing Page
 
-Official landing page for Rausku Workspace
+🐟 Rausku Workspace - Landing Page
 
 Deployed on Cloudflare Pages
