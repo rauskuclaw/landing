@@ -1,18 +1,5 @@
 # Rausku Landing Page
 
-Rausku Workspace - landing page hosted on Cloudflare Pages.
+Official landing page for Rausku Workspace
 
-## Files
-
-- `index.html` - Main HTML structure
-- `style.css` - Styling and animations
-- `script.js` - Interactive features
-
-## URL
-
-- https://rausku.com
-- https://dashboard.rausku.com (Dashboard)
-
-## Deployment
-
-Deployed automatically via Cloudflare Pages from GitHub repository.
+Deployed on Cloudflare Pages
