@@ -1,0 +1,404 @@
+/**
+ * Rausku Landing Page - Main Stylesheet
+ * Theme: Mecha Fish AI Assistant — Sharp and Calm
+ * 
+ * This is the main entry point that imports all other stylesheets.
+ * Structure: Base → Layout → Components → Utilities
+ */
+
+/* ========================================
+   IMPORTS - Design System Foundation
+   ======================================== */
+@import url('design-tokens.css');
+@import url('animations.css');
+@import url('components.css');
+@import url('responsive.css');
+@import url('grid-system.css');
+
+/* ========================================
+   CSS CUSTOM PROPERTIES - Page Specific
+   ======================================== */
+:root {
+  /* Hero specific variables */
+  --hero-min-height: 100vh;
+  --hero-min-height-mobile: 100dvh;
+  --hero-padding-top: 6rem;
+  
+  /* Section spacing */
+  --section-padding-y: var(--space-20);
+  --section-padding-y-mobile: var(--space-16);
+  
+  /* Container padding */
+  --container-padding-x: var(--space-4);
+  --container-padding-x-md: var(--space-8);
+}
+
+/* ========================================
+   BASE STYLES & RESET
+   ======================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+  color: var(--color-foam);
+  background-color: var(--color-deep);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling with offset for fixed navbar */
+html {
+  scroll-padding-top: 5rem;
+}
+
+/* Selection colors */
+::selection {
+  background: rgba(14, 165, 233, 0.3);
+  color: var(--color-foam);
+}
+
+::-moz-selection {
+  background: rgba(14, 165, 233, 0.3);
+  color: var(--color-foam);
+}
+
+/* ========================================
+   TYPOGRAPHY - Enhanced
+   ======================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  color: var(--color-foam);
+}
+
+p {
+  margin-bottom: var(--space-4);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--color-primary-light);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-bio-glow);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--color-bio-glow);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Text gradient utility */
+.text-gradient {
+  background: var(--gradient-fish);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ========================================
+   LAYOUT - Container System
+   ======================================== */
+.container {
+  width: 100%;
+  max-width: var(--container-xl);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding-x);
+  padding-right: var(--container-padding-x);
+}
+
+.container-narrow {
+  max-width: var(--container-md);
+}
+
+.container-wide {
+  max-width: var(--container-max);
+}
+
+.container-fluid {
+  width: 100%;
+  padding-left: var(--container-padding-x);
+  padding-right: var(--container-padding-x);
+}
+
+/* ========================================
+   SECTION BASE
+   ======================================== */
+.section {
+  padding: var(--section-padding-y-mobile) 0;
+  position: relative;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-10);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: var(--text-tiny);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+  padding: var(--space-1) var(--space-3);
+  background: rgba(14, 165, 233, 0.1);
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+.section-title {
+  margin-bottom: var(--space-4);
+}
+
+.section-description {
+  color: var(--color-chrome);
+  font-size: var(--text-body-lg);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ========================================
+   GLASSMORPHISM UTILITIES
+   ======================================== */
+.glass {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.glass-dark {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.glass-light {
+  background: rgba(248, 250, 252, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================
+   GLOW EFFECTS
+   ======================================== */
+.glow {
+  box-shadow: var(--shadow-glow-sm);
+}
+
+.glow-md {
+  box-shadow: var(--shadow-glow-md);
+}
+
+.glow-lg {
+  box-shadow: var(--shadow-glow-lg);
+}
+
+.glow-hover {
+  transition: box-shadow var(--transition-normal);
+}
+
+.glow-hover:hover {
+  box-shadow: var(--shadow-glow-md);
+}
+
+.glow-text {
+  text-shadow: 0 0 20px rgba(34, 211, 238, 0.5);
+}
+
+/* ========================================
+   CLIP-PATH EFFECTS
+   ======================================== */
+.clip-fish {
+  clip-path: polygon(
+    0% 50%,
+    15% 15%,
+    50% 0%,
+    85% 15%,
+    100% 50%,
+    85% 85%,
+    50% 100%,
+    15% 85%
+  );
+}
+
+.clip-wave {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 85%,
+    75% 100%,
+    50% 85%,
+    25% 100%,
+    0% 85%
+  );
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primary);
+  color: var(--color-deep);
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-semibold);
+  z-index: calc(var(--z-navbar) + 1);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: var(--space-4);
+}
+
+/* Focus visible for keyboard navigation */
+:focus-visible {
+  outline: 2px solid var(--color-bio-glow);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   SCROLLBAR STYLING
+   ======================================== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-metal);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-metal-light);
+}
+
+/* ========================================
+   LOADING STATES
+   ======================================== */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-metal-dark) 25%,
+    var(--color-metal) 50%,
+    var(--color-metal-dark) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+  border-radius: var(--radius-md);
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* ========================================
+   REDUCED MOTION
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========================================
+   HIGH CONTRAST MODE
+   ======================================== */
+@media (prefers-contrast: high) {
+  .glass,
+  .glass-dark,
+  .glass-light {
+    border-width: 2px;
+  }
+  
+  .btn {
+    border: 2px solid currentColor;
+  }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+@media print {
+  .no-print,
+  .navbar,
+  .hero-visual,
+  .social-links {
+    display: none !important;
+  }
+  
+  body {
+    background: white;
+    color: black;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+}

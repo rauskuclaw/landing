@@ -1,5 +1,3 @@
-# Rausku Landing Page
+# Landing
 
-🐟 Rausku Workspace - Landing Page
-
-Deployed on Cloudflare Pages
+Rausku landing page (static assets) deployed via Cloudflare Worker/Assets from this repo.
