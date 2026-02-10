@@ -17,6 +17,10 @@
   z-index: 0;
 }
 
+/* Ensure fish overlay stays above background image but below hero text */
+.hero .fish-container { z-index: 1; }
+.hero .hero-content { z-index: 2; }
+
 /* ========================================
    MECHA FISH PARTICLES
    ======================================== */

@@ -99,8 +99,9 @@
           <li><a href="#about" class="nav-link">Tietoa</a></li>
           <li><a href="#contact" class="nav-link">Linkit</a></li>
         </ul>
-        <div class="nav-cta">
+        <div class="nav-cta" style="display:flex; gap: 10px; align-items:center;">
           <a href="https://dashboard.rausku.com/login/" class="btn btn-primary">Avaa Dashboard</a>
+          <a href="mailto:rausku@rausku.com?subject=Rausku%20Workspace%20Early%20Access%20kutsu" class="btn btn-secondary">Pyydä kutsu</a>
         </div>
       </nav>
     </div>
@@ -108,7 +109,8 @@
   
   <main id="main-content">
     <!-- Hero Section -->
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero hero-statement" aria-labelledby="hero-title">
+      <div class="hero-bg-image" aria-hidden="true"></div>
       <!-- Animated Fish Background -->
       <div class="fish-container" aria-hidden="true">
         <!-- Light rays -->
@@ -237,47 +239,30 @@
       </div>
       
       <div class="hero-content">
-        <!-- Animated Mecha Fish Visual -->
+        <span class="demo-badge">Early Access • Ilmainen</span>
+
+        <!-- Statement Visual -->
         <div class="hero-visual" aria-hidden="true">
-          <svg class="mecha-fish mecha-fish-glow" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="heroFishGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style="stop-color:#0EA5E9"/>
-                <stop offset="50%" style="stop-color:#22D3EE"/>
-                <stop offset="100%" style="stop-color:#38BDF8"/>
-              </linearGradient>
-              <filter id="glow">
-                <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-                <feMerge>
-                  <feMergeNode in="coloredBlur"/>
-                  <feMergeNode in="SourceGraphic"/>
-                </feMerge>
-              </filter>
-            </defs>
-            <!-- Stylized mecha fish -->
-            <ellipse cx="100" cy="100" rx="70" ry="50" fill="url(#heroFishGrad)" filter="url(#glow)"/>
-            <circle cx="65" cy="90" r="12" fill="#F8FAFC"/>
-            <circle cx="67" cy="88" r="6" fill="#0F172A"/>
-            <path d="M160 100l30-20v40l-30-20z" fill="#0EA5E9"/>
-            <path d="M85 145l-10 20h20l-10-20z" fill="#0284C7"/>
-            <!-- Mechanical details -->
-            <rect x="90" y="70" width="40" height="4" rx="2" fill="rgba(255,255,255,0.3)"/>
-            <rect x="100" y="80" width="30" height="3" rx="1.5" fill="rgba(255,255,255,0.2)"/>
-          </svg>
+          <img src="assets/images/rausku-mascot.webp" alt="" loading="eager" decoding="async" />
         </div>
         
         <h1 id="hero-title" class="hero-title text-display">
-          Rausku Workspace<br>
-          <span class="highlight">Dashboard</span>
+          Rausku Workspace — pidä projektit, tehtävät, ideat ja tiketit samassa paikassa.
         </h1>
         
         <p class="hero-subtitle text-body-lg">
-          Projektit, tehtävät, ideat ja tiketit samassa paikassa — reaaliajassa.
+          Reaaliaikainen dashboard, joka tekee etenemisestä näkyvää. Kevyt käyttää, mutta tarpeeksi jämäkkä tekemiseen.
         </p>
+
+        <ul class="hero-bullets" aria-label="Hyödyt">
+          <li><b>Näe seuraava askel heti:</b> todo → in-progress → ready → done</li>
+          <li><b>Reaaliaika:</b> activity päivittyy ilman refreshä</li>
+          <li><b>Yksi paikka:</b> ideat ja tiketit ei huku eri appeihin</li>
+        </ul>
         
         <div class="hero-cta">
           <a href="https://dashboard.rausku.com/login/" class="btn btn-primary btn-lg">Avaa Dashboard</a>
-          <a href="#features" class="btn btn-secondary btn-lg">Ominaisuudet</a>
+          <a href="mailto:rausku@rausku.com?subject=Rausku%20Workspace%20Early%20Access%20kutsu" class="btn btn-secondary btn-lg">Pyydä kutsu</a>
         </div>
       </div>
       
@@ -347,35 +332,7 @@
       <div class="container">
         <div class="about-grid">
           <div class="about-visual">
-            <svg class="about-image" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <defs>
-                <linearGradient id="aboutFishGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style="stop-color:#0EA5E9"/>
-                  <stop offset="50%" style="stop-color:#22D3EE"/>
-                  <stop offset="100%" style="stop-color:#38BDF8"/>
-                </linearGradient>
-                <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" style="stop-color:rgba(34,211,238,0.3)"/>
-                  <stop offset="100%" style="stop-color:transparent"/>
-                </radialGradient>
-              </defs>
-              <!-- Background glow -->
-              <circle cx="200" cy="200" r="150" fill="url(#glowGrad)"/>
-              <!-- Large mecha fish -->
-              <ellipse cx="200" cy="200" rx="120" ry="80" fill="url(#aboutFishGrad)"/>
-              <circle cx="130" cy="180" r="20" fill="#F8FAFC"/>
-              <circle cx="135" cy="175" r="10" fill="#0F172A"/>
-              <path d="M300 200l50-35v70l-50-35z" fill="#0EA5E9"/>
-              <!-- Mechanical fins -->
-              <path d="M150 270l-20 40h40l-20-40z" fill="#0284C7"/>
-              <path d="M250 270l-20 40h40l-20-40z" fill="#0284C7"/>
-              <!-- Tech details -->
-              <rect x="160" y="140" width="80" height="6" rx="3" fill="rgba(255,255,255,0.3)"/>
-              <rect x="180" y="155" width="60" height="4" rx="2" fill="rgba(255,255,255,0.2)"/>
-              <rect x="190" y="170" width="40" height="3" rx="1.5" fill="rgba(255,255,255,0.15)"/>
-              <!-- Circuit patterns -->
-              <path d="M100 200h40M260 200h40M200 120v40M200 240v40" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
-            </svg>
+            <img class="about-image" src="assets/images/realtime-currents.webp" alt="Realtime activity" loading="lazy" decoding="async" />
           </div>
           
           <div class="about-content">
@@ -387,7 +344,11 @@
             </p>
             
             <p class="about-text">
-              Pidetään sisältö mieluummin faktana kuin markkinointina: ei tyhjiä some-linkkejä eikä hatusta vedettyjä "10k käyttäjää" -numeroita.
+              Rausku on tarkoituksella kevyt: saat prosessin ja näkyvyyden ilman enterprise-säätöä.
+            </p>
+
+            <p class="about-text">
+              Early Access on <b>ilmainen</b>. Myöhemmin tulossa edulliset Solo/Team -tasot (ja halutessa self-host optio power-usereille).
             </p>
             
             <div class="about-stats">
@@ -413,11 +374,12 @@
     <section class="cta" aria-labelledby="cta-title">
       <div class="container cta-content">
         <h2 id="cta-title" class="cta-title">Valmis sukeltamaan?</h2>
-        <p class="cta-description">Avaa dashboard ja jatka projektien kanssa.</p>
+        <p class="cta-description">Early Access on <b>ilmainen</b> — nyt haetaan käyttäjiä ja palaute ohjaa roadmapia.</p>
         <div class="cta-buttons">
-          <a href="https://dashboard.rausku.com/login/" class="btn btn-primary btn-xl">Siirry Dashboardiin</a>
-          <a href="https://dashboard.rausku.com/projektieditori/" class="btn btn-secondary btn-lg">Avaa Projektieditori</a>
+          <a href="https://dashboard.rausku.com/login/" class="btn btn-primary btn-xl">Avaa Dashboard</a>
+          <a href="mailto:rausku@rausku.com?subject=Rausku%20Workspace%20Early%20Access%20kutsu" class="btn btn-secondary btn-lg">Pyydä kutsu</a>
         </div>
+        <p class="muted" style="margin-top: 12px;">Myöhemmin: Solo 9€/kk • Team 29€/kk • Business 79€/kk</p>
       </div>
     </section>
     
@@ -438,9 +400,9 @@
           
           <nav class="footer-links" aria-label="Linkit">
             <a href="https://dashboard.rausku.com/" class="footer-link" target="_blank" rel="noopener noreferrer">Dashboard</a>
+            <a href="mailto:rausku@rausku.com?subject=Rausku%20Workspace%20Early%20Access%20kutsu" class="footer-link">Pyydä kutsu</a>
             <a href="https://github.com/rauskuclaw/dashboard" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a href="#features" class="footer-link">Ominaisuudet</a>
-            <a href="#about" class="footer-link">Tietoa</a>
           </nav>
           
           <div class="footer-social">

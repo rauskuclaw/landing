@@ -357,6 +357,27 @@
   overflow: hidden;
 }
 
+/* Statement hero background image layer */
+.hero-bg-image {
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/images/hero-statement.webp');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.45;
+  filter: saturate(1.1) contrast(1.05);
+  transform: scale(1.04);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-bg-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 30%, rgba(15, 23, 42, 0.15) 0%, rgba(15, 23, 42, 0.65) 60%, rgba(15, 23, 42, 0.85) 100%);
+}
+
 /* Background glow effect */
 .hero::before {
   content: '';
@@ -381,7 +402,7 @@
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   text-align: center;
   max-width: 900px;
 }
@@ -394,10 +415,13 @@
   position: relative;
 }
 
-.hero-visual svg {
+.hero-visual svg,
+.hero-visual img {
   width: 100%;
   height: 100%;
-  filter: drop-shadow(0 0 30px rgba(34, 211, 238, 0.5));
+  object-fit: cover;
+  border-radius: var(--radius-2xl);
+  filter: drop-shadow(0 0 30px rgba(34, 211, 238, 0.45));
   animation: float 6s ease-in-out infinite;
 }
 
@@ -459,7 +483,26 @@
   font-size: 1.125rem;
   color: var(--color-chrome);
   max-width: 100%;
+  margin: 0 auto var(--space-6);
+}
+
+.hero-bullets {
+  list-style: none;
   margin: 0 auto var(--space-8);
+  padding: 0;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  color: var(--color-chrome);
+}
+
+.hero-bullets li {
+  background: rgba(2, 6, 23, 0.35);
+  border: 1px solid rgba(226, 232, 240, 0.12);
+  border-radius: var(--radius-xl);
+  padding: 10px 12px;
+  backdrop-filter: blur(8px);
 }
 
 /* Hero CTA Buttons */
@@ -501,6 +544,21 @@
   background: var(--color-deep);
   position: relative;
 }
+
+/* Subtle feature section background image */
+.features::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('assets/images/realtime-currents.webp');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.08;
+  filter: blur(0px) saturate(1.2);
+  pointer-events: none;
+}
+
+.features .container { position: relative; z-index: 1; }
 
 .features-grid {
   display: flex;
